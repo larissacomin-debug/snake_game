@@ -2,7 +2,7 @@
 
 :root{
     --verde: #4ADE80;
-    --verde-escuro: #16A34S;
+    --verde-escuro:#16A34A;;
     --fundo:#0A0F0A;
     --fundo-card:#111A11;
     --borda: #1F3320;
@@ -21,8 +21,8 @@ body{
     background-color: var(--fundo);
     color: var(--texto);
     min-height: 100vh;
-    background-image:radial-gradient(elipse at 20% 20%, rgba(74,222,128,0.06) 0%,transparent 60%),
-    radial-gradient(elipse at 80% 80%, rgba(22,163,74,0.05) 0%,transparent 60%) ;
+    background-image:radial-gradient(ellipse at 20% 20%, rgba(74,222,128,0.06) 0%,transparent 60%),
+    radial-gradient(ellipse at 80% 80%, rgba(22,163,74,0.05) 0%,transparent 60%) ;
 }
 
 .navbar{
@@ -36,4 +36,111 @@ body{
     font-size: 0.85rem !important;
     color: var(--verde) !important;
     letter-spacing: 1px;
+}
+
+.navbar-text {
+    font-size: 0.8rem;
+    color: var(--esmaecido);
+}
+
+/*Titulo*/
+.titulo-jogo {
+    font-family: "Press Start 2P", monospace;
+    font-size: clamp(2rem, 8vw, 3.5rem) !important;
+    color:var(--verde);
+    text-shadow: 0 0 20px rgba(74,222,128,0.5), 0 0 60px rgba(74,222,128,0.2);
+    line-height: 1.2;
+    letter-spacing: 4px;
+}
+
+.subtitulo{
+    font-family: "Nunito", sans-serif;
+    color: var(--esmaecido);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+/*card*/
+.card-recorde, .card-instrucoes{
+    background: var(--fundo-card);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    color: var(--texto);
+}
+
+.label-card{
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing:1.5px;
+    color: var(--esmaecido);
+    margin-bottom: 4px;
+}
+
+.valor-recorde{
+    font-family: "Press Start 2P", monospace;
+    font-size: 1.8rem;
+    color: var(--verde);
+    line-height:1;
+}
+
+.icone-trofeu{
+    font-size:2rem;
+    opacity: 0.8;
+}
+/*dificuldade*/
+.label-secao{
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing:1.5px;
+    color: var(--esmaecido);
+}
+
+.btn-outline-dif{
+    background: var(--fundo-card);
+    border-color: var(--borda);
+    color: var(--esmaecido);
+    font-weight: 600;
+    font-size: 0.85em;
+    padding: 10px;
+    transition: all 0.2s;
+}
+
+.btn-check:checked + .btn-outline-dif{
+    background: var (--verde-escuro);
+    border-color: var(--verde);
+    color:#FFFFFF ;
+}
+
+.btn-check:checked +.btn-outline-dif{
+    background-color: var(--verde-escuro);
+    border-color: var(--verde);
+    color:#FFFFFF;
+}
+
+.btn-outline-dif:hover{
+    background: #1a2e1a!important;
+    border-color:var (--verde) !important;
+    color: var(--verde)!important;
+}
+
+.btn-jogar{
+    font-family:"Press Start 2P",monospace;
+    font-size: 0.85rem;
+    background: var(--verde);
+    color: #0a0f0a;
+    border: none;
+    border-radius: 10px;
+    padding: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.2s;
+    box-shadow: 0 0 24px rgba(74,222,128,0.3);
+}
+
+.btn-jogar:hover{
+    background: #86efac;
+    color: #0a0f0a;
+    box-shadow: 0 0 40px rgba(74, 222, 128, 0.5);
+    transform: translateY(-2px);
 }
